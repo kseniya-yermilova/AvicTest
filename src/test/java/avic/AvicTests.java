@@ -48,8 +48,7 @@ public class AvicTests {
     @Test
     public void checkThatLoginFieldDoesNotAcceptInvalidData() {
         driver.findElement(By.xpath("//div[@class='header-bottom__login flex-wrap middle-xs']//i[@class='icon icon-user-big']")).click();//клик на значок входа
-        driver.findElement(By.xpath("//div[@class='width-auto']//input[@type='text' and @name='login']")).sendKeys("lalala.com");
-        //    driver.findElement(By.xpath("//*[@id=\"mm-0\"]/main/div/div[2]/form/div[1]/div/input")).sendKeys("lalala.com");//ввод имейл
+        driver.findElement(By.xpath("//div[@class='width-auto']//input[@type='text' and @name='login']")).sendKeys("lalala.com");// ввод имейл
         driver.findElement(By.xpath("//button[@class='button-reset main-btn submit main-btn--green']")).click();//клик на кнопку войти
         driver.findElement(By.xpath("//input[@type='password']")).sendKeys("qwerty");//ввод пароля
         assertTrue(driver.findElement(By.xpath("//div[@class='form-field input-field flex error']")).isDisplayed());
